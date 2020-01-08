@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!--아이콘 소스 사용을 위한 css 코드-->
+    <script
+      src="https://kit.fontawesome.com/98ab427665.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Settings | Kakao Clone</title>
+  </head>
+  <body>
+    <!--최상단 상태 바-->
+    <div class="status-bar">
+      <!--언더바(_)를 통해 신규 class(우측)가 상위 class(좌측)에 속해 있음을 알려줌-->
+      <div class="status-bar_column">
+        <i class="fas fa-signal"></i>
+        <i class="fab fa-blackberry"></i>
+        <i class="fas fa-wifi"></i>
+      </div>
+      <div class="status-bar_column">
+        <span class="status-bar_clock">
+          <!--현재 시간 출력-->
+          <p id="time-result"></p>
+          <script type="text/javascript">
+            var d = new Date();
+            var currentTime = d.getHours() + ":" + d.getMinutes();
+            var result = document.getElementById("time-result");
+            result.innerHTML = currentTime;
+          </script>
+        </span>
+      </div>
+      <div class="status-bar_column">
+        <i class="fas fa-volume-mute"></i>
+        <i class="fas fa-location-arrow"></i>
+        <span class="status-bar_battery-level">50%</span>
+        <i class="fas fa-battery-half"></i>
+      </div>
+    </div>
+  </body>
+  <!--헤더(Chats) 바-->
+  <header class="header">
+    <!--헤더 좌측 아이콘 및 타이틀-->
+    <div class="header_header-column">
+      <!--백 버튼 누를 시, 이전(more) 페이지로 이동-->
+      <a class="header_back-btn" href="more.html">
+        <i class="fas fa-arrow-left fa-2x"></i>
+      </a>
+      <h1 class="header_title">설정</h1>
+    </div>
+    <!--헤더 우측 아이콘-->
+    <div class="header_header-column">
+      <span class="header_icon">
+        <i class="fas fa-search fa-2x"></i>
+      </span>
+    </div>
+  </header>
+  <main class="settings">
+    <section class="settings_sections">
+      <ul class="settings_list">
+        <li class="settings_setting">
+          <span class="setting_icon">
+            <i class="fas fa-lock"></i>
+          </span>
+          <span class="setting_title">개인/보안</span>
+        </li>
+        <li class="setting_list">
+          <span class="setting_icon">
+            <i class="fas fa-bell"></i>
+          </span>
+          <span class="setting_title">알림</span>
+        </li>
+        <li class="setting_list">
+          <span class="setting_icon">
+            <i class="fas fa-user"></i>
+          </span>
+          <span class="setting_title">친구</span>
+        </li>
+        <li class="setting_list">
+          <span class="setting_icon">
+            <i class="fas fa-comment"></i>
+          </span>
+          <span class="setting_title">채팅</span>
+        </li>
+        <li class="setting_list">
+          <span class="setting_icon">
+            <i class="fas fa-spinner"></i>
+          </span>
+          <span class="setting_title">화면</span>
+        </li>
+        <li class="setting_list">
+          <span class="setting_icon">
+            <i class="fas fa-ellipsis-h"></i>
+          </span>
+          <span class="setting_title">기타</span>
+        </li>
+      </ul>
+    </section>
+  </main>
+</html>

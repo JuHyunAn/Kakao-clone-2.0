@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!--아이콘 소스 사용을 위한 css 코드-->
+    <script
+      src="https://kit.fontawesome.com/98ab427665.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Chats | Kakao Clone</title>
+  </head>
+  <body>
+    <!--최상단 상태 바-->
+    <div class="status-bar">
+      <!--언더바(_)를 통해 신규 class(우측)가 상위 class(좌측)에 속해 있음을 알려줌-->
+      <div class="status-bar_column">
+        <i class="fas fa-signal"></i>
+        <i class="fab fa-blackberry"></i>
+        <i class="fas fa-wifi"></i>
+      </div>
+      <div class="status-bar_column">
+        <span class="status-bar_clock">
+          <!--현재 시간 출력-->
+          <p id="time-result"></p>
+          <script type="text/javascript">
+            var d = new Date();
+            var currentTime = d.getHours() + ":" + d.getMinutes();
+            var result = document.getElementById("time-result");
+            result.innerHTML = currentTime;
+          </script>
+        </span>
+      </div>
+      <div class="status-bar_column">
+        <i class="fas fa-volume-mute"></i>
+        <i class="fas fa-location-arrow"></i>
+        <span class="status-bar_battery-level">50%</span>
+        <i class="fas fa-battery-half"></i>
+      </div>
+    </div>
+  </body>
+  <!--헤더(Chats) 바-->
+  <header class="header">
+    <div class="header_header-cloumn">
+      <h1 class="header_title">채팅</h1>
+    </div>
+    <!--헤더 우측 아이콘-->
+    <div class="header_header-cloumn">
+      <span class="header_icon">
+        <i class="fas fa-search"></i>
+      </span>
+      <span class="header_icon">
+        <i class="fas fa-comment-medical"></i>
+      </span>
+      <span class="header_icon">
+        <i class="fas fa-cog"></i>
+      </span>
+    </div>
+  </header>
+  <!--채팅 메인-->
+  <main class="chats">
+    <ul class="chats_list">
+      <li class="chats_chat">
+        <a href="chat.html">
+          <!--채팅 목록에 많은 정보가 들어가기 때문에 신규 class명으로 컬럼 구분-->
+          <!--프로필-->
+          <div class="chat_column">
+            <!--프로필 사진의 스타일은 동일하므로, 큰 틀(전역 변수)로 제어-->
+            <img
+              class="chat_profile g-profile"
+              src="/kakao-clone-2.0/images/profile.png"
+            />
+            <div class="chat_content">
+              <span class="chat_username">안주현</span>
+              <span class="chat_preview">난 늘 머리로 생각해</span>
+            </div>
+          </div>
+          <div class="chat_column">
+            <!--메세지 받은 날짜-->
+            <span class="chat_timestamp">Yesterday</span>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </main>
+  <!--하단 목록(nevigation) 바-->
+  <nav class="nav">
+    <ul class="nav_list">
+      <li class="nav_lisk-item">
+        <a href="/kakao-clone-2.0/friends.html" class="nav_list-link">
+          <i class="far fa-user"></i>
+        </a>
+      </li>
+      <li class="nav_lisk-item">
+        <a href="/kakao-clone-2.0/index.html" class="nav_list-link">
+          <i class="fas fa-comment"></i>
+        </a>
+      </li>
+      <li class="nav_lisk-item">
+        <a href="/kakao-clone-2.0/find.html" class="nav_list-link">
+          <i class="fas fa-search"></i>
+        </a>
+      </li>
+      <li class="nav_lisk-item">
+        <a href="/kakao-clone-2.0/more.html" class="nav_list-link">
+          <i class="far fa-plus-square"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!--아이콘 소스 사용을 위한 css 코드-->
+    <script
+      src="https://kit.fontawesome.com/98ab427665.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Chat | Kakao Clone</title>
+  </head>
+  <body>
+    <!--최상단 상태 바-->
+    <div class="status-bar">
+      <!--언더바(_)를 통해 신규 class(우측)가 상위 class(좌측)에 속해 있음을 알려줌-->
+      <div class="status-bar_column">
+        <i class="fas fa-signal"></i>
+        <i class="fab fa-blackberry"></i>
+        <i class="fas fa-wifi"></i>
+      </div>
+      <div class="status-bar_column">
+        <span class="status-bar_clock">
+          <!--현재 시간 출력-->
+          <p id="time-result"></p>
+          <script type="text/javascript">
+            var d = new Date();
+            var currentTime = d.getHours() + ":" + d.getMinutes();
+            var result = document.getElementById("time-result");
+            result.innerHTML = currentTime;
+          </script>
+        </span>
+      </div>
+      <div class="status-bar_column">
+        <i class="fas fa-volume-mute"></i>
+        <i class="fas fa-location-arrow"></i>
+        <span class="status-bar_battery-level">50%</span>
+        <i class="fas fa-battery-half"></i>
+      </div>
+    </div>
+  </body>
+  <!--헤더(Chats) 바-->
+  <header class="header">
+    <!--헤더 좌측 아이콘 및 타이틀-->
+    <div class="header_header-column">
+      <!--백 버튼 누를 시, 이전(more) 페이지로 이동-->
+      <a class="header_back-btn" href="index.html">
+        <i class="fas fa-arrow-left fa-2x"></i>
+      </a>
+      <h1 class="header_title">동생</h1>
+    </div>
+    <!--헤더 우측 아이콘-->
+    <div class="header_header-column">
+      <span class="header_icon">
+        <i class="fas fa-search fa-2x"></i>
+      </span>
+    </div>
+    <div class="header_header-column">
+      <span class="header_icon">
+        <i class="fas fa-bars fa-2x"></i>
+      </span>
+    </div>
+  </header>
+  <main class="chat">
+    <ul class="chat_messages">
+      <span class="chat_timestamp">2020년 1월 8일 수요일</span>
+      <!--받은 메세지 부분-->
+      <li class="incoming-message message">
+        <!--발신자 프로필 사진-->
+        <img src="/kakao-clone-2.0/images/bro.jpg" class="g-profile" alt="" />
+        <!--발신자 이름 & 내용(말풍선)-->
+        <div class="message_content">
+          <span class="message_author">동생</span>
+          <div class="message_bubble">저녁 뭐 먹을레?</div>
+        </div>
+        <!--말풍선 옆에 보낸 시간-->
+        <span class="message_timestamp"></span>
+      </li>
+      <!--보낸 메세지 부분-->
+      <li class="outcoming-message message">
+        <span class="message_timestamp"></span>
+        <div class="message_content"></div>
+          <div class="message_bubble">당연히 엽떡 먹어야지</div>
+        </div>
+        <img
+        src="/kakao-clone-2.0/images/profile.png"
+        class="g-profile"
+        alt=""
+      />
+      </li>
+      <li class="incoming-message message">
+          <img src="/kakao-clone-2.0/images/bro.jpg" class="g-profile" alt="">
+          <div class="message_content">
+              <span class="message_author">동생</span>
+              <div class="message_bubble">오랜만에 먹어볼까?</div>
+          </div>
+          <span class="message_timestamp"></span>
+      </li>
+    </ul>
+  </main>
+  <!--하단 채팅 바-->
+  <div class="chat_write">
+      <div class="chat_write-column">
+        <i class="far fa-plus-square"></i>
+      </div>
+      <div class="chat_write-column">
+          <input type="text" placeholder="Send message" class="chat_write-input">
+      </div>
+      <div class="chat_write-column">
+          <span class="chat_write-icon">
+            <i class="far fa-grin"></i>
+        </span>
+        <span class="chat_write-icon">
+            <i class="fas fa-microphone"></i>
+        </span>
+      </div>
+  </div>
+</html>
