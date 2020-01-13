@@ -9,17 +9,20 @@
       src="https://kit.fontawesome.com/98ab427665.js"
       crossorigin="anonymous"
     ></script>
+    <link rel="stylesheet" href="/kakao-clone-2.0/css/styles.css" />
     <title>Chats | Kakao Clone</title>
   </head>
   <body>
     <!--최상단 상태 바-->
     <div class="status-bar">
       <!--언더바(_)를 통해 신규 class(우측)가 상위 class(좌측)에 속해 있음을 알려줌-->
+      <!--좌측-->
       <div class="status-bar_column">
         <i class="fas fa-signal"></i>
         <i class="fab fa-blackberry"></i>
         <i class="fas fa-wifi"></i>
       </div>
+      <!--중앙-->
       <div class="status-bar_column">
         <span class="status-bar_clock">
           <!--현재 시간 출력-->
@@ -32,6 +35,7 @@
           </script>
         </span>
       </div>
+      <!--우측-->
       <div class="status-bar_column">
         <i class="fas fa-volume-mute"></i>
         <i class="fas fa-location-arrow"></i>
@@ -94,6 +98,9 @@
       </li>
       <li class="nav_lisk-item">
         <a href="/kakao-clone-2.0/index.html" class="nav_list-link">
+          <!--badge가 아래 이모티콘을 살짝 가리도록 badge-background 추가-->
+          <div class="nav_badge-background"></div>
+          <div class="nav_badge">3</div>
           <i class="fas fa-comment"></i>
         </a>
       </li>

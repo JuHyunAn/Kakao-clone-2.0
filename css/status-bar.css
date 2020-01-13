@@ -1,0 +1,17 @@
+.status-bar {
+  display: flex;
+  /* index > status-bar(상태 바) 요소들이 가로로 정렬되도록 */
+  justify-content: space-between;
+  /* status-bar 아래에 마진을 주어 헤더 바와 간격을 조절 */
+  margin-bottom: 30px;
+  color: #656565;
+}
+
+.status-bar i {
+  font-size: 14px;
+}
+
+/* 배터리 숫자(%)를 아이콘과 살짝 가깝게 조절 */
+.status-bar .status-bar_battery-level {
+  margin-right: -2px;
+}
