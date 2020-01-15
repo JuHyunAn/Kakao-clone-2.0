@@ -3,6 +3,7 @@
 @import "status-bar.css";
 @import "/kakao-clone-2.0/css/header.css";
 @import "/kakao-clone-2.0/css/nav-bar.css";
+@import "/kakao-clone-2.0/css/friend.css";
 
 * {
   box-sizing: border-box;
@@ -20,4 +21,6 @@ body {
 /* 링크된 아이콘 색이 부모요소를 따라가도록 변경 (보라색 > 검은색) */
 a {
   color: inherit;
+  /* 링크된 텍스트 하단 밑줄 안보이도록 변경 */
+  text-decoration: none;
 }

@@ -1,0 +1,68 @@
+/* 채팅 방 프로필/마지막 대화 <-> 마지막 수/발신 시간 컬럼 간 띄어서 표기 */
+.friend {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.friend_profile.n-profile {
+  width: 70px;
+  border-radius: 31px;
+}
+
+.friend_profile.g-profile {
+  width: 50px;
+  border-radius: 21px;
+}
+
+.friend .friend_column {
+  display: flex;
+  align-items: center;
+}
+
+.friend .friend_profile {
+  margin-right: 10px;
+}
+
+.friends .friend_content .friend_name {
+  margin-bottom: 0px;
+}
+
+.friend_content .friend_name {
+  margin-bottom: 5px;
+  /* 채팅 내용을 이름 하단에 위치하도록, name 부분 고정 */
+  display: block;
+  /* 이름 부분 볼드 처리 */
+  font-weight: 600;
+}
+
+/* friend_bottom-text는 inline에 정렬되어 있음, 
+('name' 표기 block 으로 인해 아래로 밀려내려감) */
+
+.friend_content .friend_bottom-text {
+  opacity: 55%;
+  font-size: 12px;
+}
+
+.friend_column .friend_timestamp {
+  opacity: 50%;
+  font-size: 10px;
+}
+
+.friend_content .friend_status {
+  opacity: 55%;
+  font-size: 11px;
+}
+
+.friends .friends_plus-title {
+  opacity: 55%;
+  font-size: 10px;
+}
+
+.friend_column .friend_now-listening {
+  font-size: 10px;
+  border-color: springgreen;
+  border-width: 1.5px;
+  border-style: solid;
+  border-radius: 20px;
+}
