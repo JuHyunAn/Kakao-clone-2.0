@@ -67,11 +67,11 @@
       <!--받은 메세지 부분-->
       <li class="incoming-message message">
         <!--발신자 프로필 사진-->
-        <img src="/kakao-clone-2.0/images/bro.jpg" class="g-profile" alt="" />
+        <img src="/kakao-clone-2.0/images/bro.jpg" class="g-profile" alt=""/>
         <!--발신자 이름 & 내용(말풍선)-->
         <div class="message_content">
           <span class="message_author">동생</span>
-          <div class="message_bubble">저녁 뭐 먹을레?</div>
+          <div class="message_bubble">저녁 뭐 먹을래?</div>
         </div>
         <!--말풍선 옆에 보낸 시간-->
         <span class="message_timestamp"></span>
@@ -85,8 +85,7 @@
         <img
         src="/kakao-clone-2.0/images/profile.png"
         class="g-profile"
-        alt=""
-      />
+        alt=""/>
       </li>
       <li class="incoming-message message">
           <img src="/kakao-clone-2.0/images/bro.jpg" class="g-profile" alt="">
@@ -98,23 +97,34 @@
       </li>
     </ul>
   </main>
-  <!--하단 채팅 바-->
-  <div class="chat_write">
-      <div class="chat_write-column">
-        <i class="far fa-plus-square"></i>
-      </div>
-      <div class="chat_write-column">
-          <input type="text" placeholder="Send message" class="chat_write-input">
-      </div>
-      <div class="chat_write-column">
-          <span class="chat_write-icon">
-            <i class="far fa-grin"></i>
-        </span>
-        <span class="chat_write-icon">
-            <i class="fas fa-microphone"></i>
-        </span>
-      </div>
-  </div>
+  <!--하단 목록(nevigation) 바-->
+  <nav class="nav">
+    <ul class="nav_list">
+      <li class="nav_lisk-item">
+        <a href="/kakao-clone-2.0/friends.html" class="nav_list-link">
+          <i class="far fa-user"></i>
+        </a>
+      </li>
+      <li class="nav_lisk-item">
+        <a href="/kakao-clone-2.0/index.html" class="nav_list-link">
+          <!--badge가 아래 이모티콘을 살짝 가리도록 badge-background 추가-->
+          <div class="nav_badge-background"></div>
+          <div class="nav_badge">3</div>
+          <i class="fas fa-comment"></i>
+        </a>
+      </li>
+      <li class="nav_lisk-item">
+        <a href="/kakao-clone-2.0/find.html" class="nav_list-link">
+          <i class="fas fa-search"></i>
+        </a>
+      </li>
+      <li class="nav_lisk-item">
+        <a href="/kakao-clone-2.0/more.html" class="nav_list-link">
+          <i class="far fa-plus-square"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
 </html>
 
 <!--채팅 창-->

@@ -65,26 +65,31 @@
   <!--채팅 메인-->
   <main class="chats">
     <ul class="chats_list">
-      <li class="chats_chat">
-        <a href="chat.html">
-          <!--채팅 목록에 많은 정보가 들어가기 때문에 신규 class명으로 컬럼 구분-->
-          <!--프로필-->
-          <div class="chat_column">
-            <!--프로필 사진의 스타일은 동일하므로, 큰 틀(전역 변수)로 제어-->
-            <img
-              class="chat_profile g-profile"
-              src="/kakao-clone-2.0/images/profile.png"
-            />
-            <div class="chat_content">
-              <span class="chat_username">안주현</span>
-              <span class="chat_preview">난 늘 머리로 생각해</span>
+      <li class="chats_chat chat">
+      <!--채팅 목록 프로필 사이즈, 'friend friend--nm' 추가 -->
+        <div class="chats_chat friend friend--nm">
+          <a href="chat.html">
+            <!--채팅 방 목록에서 보이는 프로필/마지막 대화 컬럼-->
+            <div class="friend_column">
+              <!--프로필 크기가 친구 목록과 다르므로, 'n-profile' 추가-->
+              <img
+                class="friend_profile n-profile"
+                src="/kakao-clone-2.0/images/bro.jpg"
+                alt=""
+              />
+              <div class="friend_content">
+                <span class="friend_name">동생</span>
+                <!--friend_status 보다 text 크기가 작기 때문에 분리-->
+                <span class="friend_bottom-text">오랜만에 먹어볼까?</span>
+              </div>
             </div>
-          </div>
-          <div class="chat_column">
-            <!--메세지 받은 날짜-->
-            <span class="chat_timestamp">Yesterday</span>
-          </div>
-        </a>
+            <!--채팅 방 우측 수/발신 시간 컬럼-->
+            <div class="friend_column">
+              <span class="friend_timestamp">
+                오후 5:29
+              </span>
+          </a>
+        </div>
       </li>
     </ul>
   </main>
