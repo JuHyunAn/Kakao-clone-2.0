@@ -4,8 +4,8 @@
 }
 
 .friends .friends_plus-friend {
-  /* 패딩 탑 사이즈 10px 설정 ('플러스 친구' 폰트 사이즈가 10px, 총 20px) */
-  padding-top: 10px;
+  /* 패딩 탑 사이즈 10px 설정 */
+  padding-top: 13px;
   padding-bottom: 20px;
   border-bottom: 1px solid #3d3d3d;
 }
@@ -15,7 +15,7 @@
 }
 
 .friends .friends_title {
-  padding-top: 10px;
+  padding-top: 13px;
   padding-bottom: 25px;
 }
 

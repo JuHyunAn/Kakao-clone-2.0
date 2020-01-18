@@ -6,6 +6,8 @@
 @import "/kakao-clone-2.0/css/nav-bar.css";
 @import "/kakao-clone-2.0/css/friend.css";
 @import "/kakao-clone-2.0/css/friends.css";
+@import "/kakao-clone-2.0/css/find.css";
+@import "/kakao-clone-2.0/css/more.css";
 
 * {
   box-sizing: border-box;

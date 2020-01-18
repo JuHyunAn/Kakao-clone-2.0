@@ -10,9 +10,14 @@
   border-radius: 31px;
 }
 
-.friend_profile.g-profile {
+.friend_profile.my-profile {
   width: 50px;
   border-radius: 21px;
+}
+
+.friend_profile.g-profile {
+  width: 45px;
+  border-radius: 20px;
 }
 
 .friend .friend_column {
@@ -45,17 +50,27 @@
   font-size: 15px;
 }
 
+/* 채팅 목록에 보이는 이름이 친구 목록에서 보다 더 굵음 */
+.friend_content .friend_chname {
+  margin-bottom: 5px;
+  display: block;
+  font-weight: 400;
+  font-size: 15px;
+}
+
 /* friend_bottom-text는 inline에 정렬되어 있음, 
 ('name' 표기 block 으로 인해 아래로 밀려내려감) */
 
 .friend_content .friend_bottom-text {
   opacity: 55%;
   font-size: 12px;
+  font-weight: 100;
 }
 
 .friend_column .friend_timestamp {
   opacity: 50%;
   font-size: 10px;
+  font-weight: 100;
 }
 
 .friend_content .friend_status {
@@ -76,7 +91,7 @@
   padding: 5px 10px;
   font-size: 10px;
   font-weight: 100;
-  /* border: width style color; */
+  /* border: weight style color; */
   border: 0.5px solid #5aad77;
   border-radius: 20px;
 }
