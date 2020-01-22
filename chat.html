@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="/kakao-clone-2.0/css/styles.css">
     <title>Chat | Kakao Clone</title>
   </head>
-  <body>
+  <body class="chats_body">
     <!--최상단 상태 바-->
     <div class="status-bar">
       <!--언더바(_)를 통해 신규 class(우측)가 상위 class(좌측)에 속해 있음을 알려줌-->
@@ -74,11 +74,11 @@
           <div class="message_bubble">저녁 뭐 먹을래?</div>
         </div>
         <!--말풍선 옆에 보낸 시간-->
-        <span class="message_timestamp"></span>
+        <span class="message_timestamp">오후 6:27</span>
       </li>
       <!--보낸 메세지 부분-->
       <li class="outcoming-message message">
-        <span class="message_timestamp"></span>
+        <span class="message_timestamp">오후 6:43</span>
         <div class="message_content"></div>
           <div class="message_bubble">당연히 엽떡 먹어야지</div>
         </div>
@@ -90,38 +90,30 @@
       <li class="incoming-message message">
           <img src="/kakao-clone-2.0/images/bro.jpg" class="g-profile" alt="">
           <div class="message_content">
-              <span class="message_author">동생</span>
-              <div class="message_bubble">오랜만에 먹어볼까?</div>
+            <span class="message_author">동생</span>
+            <div class="message_bubble">오랜만에 먹어볼까?</div>
           </div>
-          <span class="message_timestamp"></span>
+          <span class="message_timestamp">오후 7:05</span>
       </li>
     </ul>
   </main>
   <!--하단 목록(nevigation) 바-->
   <nav class="nav">
     <ul class="nav_list">
-      <li class="nav_lisk-item">
-        <a href="/kakao-clone-2.0/friends.html" class="nav_list-link">
-          <i class="far fa-user"></i>
-        </a>
+      <li class="nav_list-item">
+        <i class="far fa-plus-square"></i>
       </li>
-      <li class="nav_lisk-item">
-        <a href="/kakao-clone-2.0/index.html" class="nav_list-link">
-          <!--badge가 아래 이모티콘을 살짝 가리도록 badge-background 추가-->
-          <div class="nav_badge-background"></div>
-          <div class="nav_badge">3</div>
-          <i class="fas fa-comment"></i>
-        </a>
+      <li class="chat_write">
+        <!--채팅 치는 영역-->
+        <div class="chat_write-column">
+          <input type="text" placeholder="내용을 입력하세요." class="chat_write-input">
+        </div>
       </li>
-      <li class="nav_lisk-item">
-        <a href="/kakao-clone-2.0/find.html" class="nav_list-link">
-          <i class="fas fa-search"></i>
-        </a>
+      <li class="nav_list-item">
+        <i class="far fa-smile"></i>
       </li>
-      <li class="nav_lisk-item">
-        <a href="/kakao-clone-2.0/more.html" class="nav_list-link">
-          <i class="far fa-plus-square"></i>
-        </a>
+      <li class="nav_list-item">
+        <i class="fas fa-hashtag"></i>
       </li>
     </ul>
   </nav>
