@@ -8,6 +8,8 @@
 @import "/kakao-clone-2.0/css/friends.css";
 @import "/kakao-clone-2.0/css/find.css";
 @import "/kakao-clone-2.0/css/more.css";
+@import "/kakao-clone-2.0/css/settings.css";
+@import "/kakao-clone-2.0/css/chat.css";
 
 * {
   box-sizing: border-box;
