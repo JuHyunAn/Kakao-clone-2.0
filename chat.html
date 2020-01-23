@@ -9,7 +9,7 @@
       src="https://kit.fontawesome.com/98ab427665.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="/kakao-clone-2.0/css/styles.css">
+    <link rel="stylesheet" href="/kakao-clone-2.0/css/styles.css" />
     <title>Chat | Kakao Clone</title>
   </head>
   <body class="chats_body">
@@ -49,7 +49,7 @@
       <a class="header_back-btn" href="index.html">
         <i class="fas fa-arrow-left"></i>
       </a>
-      <h1 class="header_title">동생</h1>
+      <h1 class="header_title">Teramoto Yukika</h1>
     </div>
     <!--헤더 우측 아이콘-->
     <div class="header_header-column">
@@ -67,11 +67,11 @@
       <!--받은 메세지 부분-->
       <li class="incoming-message message">
         <!--발신자 프로필 사진-->
-        <img src="/kakao-clone-2.0/images/bro.jpg" class="g-profile" alt=""/>
+        <img src="/kakao-clone-2.0/images/bro.jpg" class="g-profile" alt="" />
         <!--발신자 이름 & 내용(말풍선)-->
         <div class="message_content">
-          <span class="message_author">동생</span>
-          <div class="message_bubble">저녁 뭐 먹을래?</div>
+          <span class="message_author">Teramoto Yukika</span>
+          <div class="message_bubble">저녁 먹으러 가자~</div>
         </div>
         <!--말풍선 옆에 보낸 시간-->
         <span class="message_timestamp">오후 6:27</span>
@@ -79,21 +79,72 @@
       <!--보낸 메세지 부분-->
       <li class="outcoming-message message">
         <span class="message_timestamp">오후 6:43</span>
-        <div class="message_content"></div>
-          <div class="message_bubble">당연히 엽떡 먹어야지</div>
+        <div class="message_content">
+          <div class="message_bubble">파스타 먹으러갈까?</div>
         </div>
-        <img
-        src="/kakao-clone-2.0/images/profile.png"
-        class="g-profile"
-        alt=""/>
+        <!--프로필 사진과 보낸 메세지 사이를 띄우기 위해 span 추가 (이미지 잘림 방지)-->
+        <span class="chat_img">
+          <img
+            src="/kakao-clone-2.0/images/profile.png"
+            class="g-profile"
+            alt=""
+          />
+        </span>
       </li>
       <li class="incoming-message message">
-          <img src="/kakao-clone-2.0/images/bro.jpg" class="g-profile" alt="">
-          <div class="message_content">
-            <span class="message_author">동생</span>
-            <div class="message_bubble">오랜만에 먹어볼까?</div>
-          </div>
-          <span class="message_timestamp">오후 7:05</span>
+        <img src="/kakao-clone-2.0/images/bro.jpg" class="g-profile" alt="" />
+        <div class="message_content">
+          <span class="message_author">Teramoto Yukika</span>
+          <div class="message_bubble">좋아! 바로 나갈께 기달려</div>
+        </div>
+        <span class="message_timestamp">오후 7:05</span>
+      </li>
+      <li class="outcoming-message message">
+        <span class="message_timestamp">오후 7:15</span>
+        <div class="message_content">
+          <div class="message_bubble">알았어 정문으로 와</div>
+        </div>
+        <!--프로필 사진과 보낸 메세지 사이를 띄우기 위해 span 추가 (이미지 잘림 방지)-->
+        <span class="chat_img">
+          <img
+            src="/kakao-clone-2.0/images/profile.png"
+            class="g-profile"
+            alt=""
+          />
+        </span>
+      </li>
+      <li class="incoming-message message">
+        <img src="/kakao-clone-2.0/images/bro.jpg" class="g-profile" alt="" />
+        <div class="message_content">
+          <span class="message_author">Teramoto Yukika</span>
+          <div class="message_bubble">정문으로 가는중!</div>
+        </div>
+        <div class="message_etc">
+          <span class="message_check">1</span>
+          <span class="message_timestamp">오후 7:17</span>
+        </div>
+      </li>
+      <li class="incoming-message message">
+        <img src="/kakao-clone-2.0/images/bro.jpg" class="g-profile" alt="" />
+        <div class="message_content">
+          <span class="message_author">Teramoto Yukika</span>
+          <div class="message_bubble">다음에 또 가자 맛집이네ㅋㅋ</div>
+        </div>
+        <div class="message_etc">
+          <span class="message_check">1</span>
+          <span class="message_timestamp">오후 8:56</span>
+        </div>
+      </li>
+      <li class="incoming-message message">
+        <img src="/kakao-clone-2.0/images/bro.jpg" class="g-profile" alt="" />
+        <div class="message_content">
+          <span class="message_author">Teramoto Yukika</span>
+          <div class="message_bubble">공부 좀 하다가 자야겠어ㅠ</div>
+        </div>
+        <div class="message_etc">
+          <span class="message_check">1</span>
+          <span class="message_timestamp">오후 9:14</span>
+        </div>
       </li>
     </ul>
   </main>
@@ -106,7 +157,11 @@
       <li class="chat_write">
         <!--채팅 치는 영역-->
         <div class="chat_write-column">
-          <input type="text" placeholder="내용을 입력하세요." class="chat_write-input">
+          <input
+            type="text"
+            placeholder="내용을 입력하세요."
+            class="chat_write-input"
+          />
         </div>
       </li>
       <li class="nav_list-item">
