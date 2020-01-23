@@ -1,5 +1,5 @@
 .chats_body {
-  background-image: url("/kakao-clone-2.0/images/chatBG2.png");
+  background-image: url("/kakao-clone-2.0/images/chatBG3.png");
   /* 기존 body 태그의 마진 값을 건들지 않으면서 이미지 전체화면으로 */
   min-height: 100vh;
 }
@@ -9,13 +9,13 @@
   color: #3d3d3d;
 }
 
-/* 채팅 방 내 프로필 크기 조절 */
+/* 채팅 프로필 */
 .chat .g-profile {
   width: 40px;
   border-radius: 18px;
 }
 
-/* 상단 채팅 날짜 표기 부분 */
+/* 상단 중앙 채팅 날짜 */
 .chat .chat_timestamp {
   font-size: 11px;
   font-weight: 100;
@@ -55,41 +55,78 @@
 
 .chat .incoming-message.message {
   display: flex;
-  align-items: center;
-  color: #3d3d3d;
+  /* 정렬이 시작되는 부분(맨 상단)으로 프로필 사진 조절 */
+  align-items: flex-start;
+  color: black;
 }
 
 .chat .outcoming-message.message {
   display: flex;
-  color: #3d3d3d;
+  color: black;
   align-items: center;
-  margin-left: 50%;
+  margin-left: 52%;
 }
 
 .incoming-message.message .message_content {
   padding-left: 10px;
 }
 
-.outcoming-message.message .message_bubble {
-  padding-right: 10px;
-}
-
+/* 상대방 이름 부분 */
 .message_content .message_author {
-  font-size: 13px;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
 }
 
+/* 내가 보낸 메세지와 프로필 사이 띄우기 */
+.outcoming-message.message .chat_img {
+  padding-left: 10px;
+}
+
+/* 채팅 말풍선 공통 디자인 */
 .chat .message_bubble {
-  font-size: 14px;
+  font-size: 13px;
+  border-radius: 10px;
+  /* background color 적용을 위해 border 대신 padding 사용! */
+  padding: 10px;
+  /* 말풍선 아래 그림자 효과 */
+  box-shadow: 0 12px 10px -5px rgba(50, 50, 93, 0.25);
+  /* 말풍선 사이 간격 띄우기 */
+  margin-bottom: 17px;
 }
 
+/* 받은 메세지 말풍선 왼쪽 윗부분 날카롭게 변경 */
+.incoming-message.message .message_bubble {
+  border-top-left-radius: 0px;
+  background-image: linear-gradient(to left, #ffeeee, #ff9472);
+}
+
+/* 보낸 메세지 말풍선 오른쪽 윗부분 날카롭게 변경 */
+.outcoming-message.message .message_bubble {
+  border-top-right-radius: 0px;
+  background-image: linear-gradient(to left, #fce006, #ffeeee);
+}
+
+/* 메세지 보낸 시간 */
 .incoming-message.message .message_timestamp {
   font-size: 10px;
-  margin-top: 20px;
+  margin-top: 40px;
   padding-left: 5px;
 }
 
 .outcoming-message.message .message_timestamp {
   font-size: 10px;
-  margin-top: 4px;
+  margin-top: -1px;
   padding-right: 5px;
+}
+
+/* 받은 메세지 수신 확인 카운트 */
+.message_etc .message_check {
+  display: flex;
+  margin-top: 25px;
+  padding-left: 5px;
+  font-size: 9px;
+  font-weight: bold;
+  color: #fce006;
 }

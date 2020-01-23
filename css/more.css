@@ -66,6 +66,12 @@
 
 /* 더보기 - 내 프로필 우측 아이콘 위치 조절 */
 .more .friend_column2 {
-  font-size: 12px;
-  margin-right: 15px;
+  font-size: 10px;
+  margin-right: 25px;
+}
+
+.friend_column2 .gotomail_gmail {
+  width: 30px;
+  align-items: center;
+  display: flex;
 }
