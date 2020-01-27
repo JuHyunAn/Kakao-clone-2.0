@@ -10,6 +10,7 @@
 @import "/kakao-clone-2.0/css/more.css";
 @import "/kakao-clone-2.0/css/settings.css";
 @import "/kakao-clone-2.0/css/chat.css";
+@import "/kakao-clone-2.0/css/mobile.css";
 
 * {
   box-sizing: border-box;
