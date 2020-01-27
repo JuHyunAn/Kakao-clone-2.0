@@ -13,54 +13,56 @@
     <title>Chat | Kakao Clone</title>
   </head>
   <body class="chats_body">
-    <!--최상단 상태 바-->
-    <div class="status-bar">
-      <!--언더바(_)를 통해 신규 class(우측)가 상위 class(좌측)에 속해 있음을 알려줌-->
-      <div class="status-bar_column">
-        <i class="fas fa-signal"></i>
-        <i class="fab fa-blackberry"></i>
-        <i class="fas fa-wifi"></i>
+    <div class="header-wrapper">
+      <!--최상단 상태 바-->
+      <div class="status-bar">
+        <!--언더바(_)를 통해 신규 class(우측)가 상위 class(좌측)에 속해 있음을 알려줌-->
+        <div class="status-bar_column">
+          <i class="fas fa-signal"></i>
+          <i class="fab fa-blackberry"></i>
+          <i class="fas fa-wifi"></i>
+        </div>
+        <div class="status-bar_column">
+          <span class="status-bar_clock">
+            <!--현재 시간 출력-->
+            <p id="time-result"></p>
+            <script type="text/javascript">
+              var d = new Date();
+              var currentTime = d.getHours() + ":" + d.getMinutes();
+              var result = document.getElementById("time-result");
+              result.innerHTML = currentTime;
+            </script>
+          </span>
+        </div>
+        <div class="status-bar_column">
+          <i class="fas fa-volume-mute"></i>
+          <i class="fas fa-location-arrow"></i>
+          <span class="status-bar_battery-level">50%</span>
+          <i class="fas fa-battery-half"></i>
+        </div>
       </div>
-      <div class="status-bar_column">
-        <span class="status-bar_clock">
-          <!--현재 시간 출력-->
-          <p id="time-result"></p>
-          <script type="text/javascript">
-            var d = new Date();
-            var currentTime = d.getHours() + ":" + d.getMinutes();
-            var result = document.getElementById("time-result");
-            result.innerHTML = currentTime;
-          </script>
-        </span>
-      </div>
-      <div class="status-bar_column">
-        <i class="fas fa-volume-mute"></i>
-        <i class="fas fa-location-arrow"></i>
-        <span class="status-bar_battery-level">50%</span>
-        <i class="fas fa-battery-half"></i>
-      </div>
+      <!--헤더(Chats) 바-->
+      <header class="header">
+        <!--헤더 좌측 아이콘 및 타이틀-->
+        <div class="header_header-column">
+          <!--백 버튼 누를 시, 이전(more) 페이지로 이동-->
+          <a class="header_back-btn" href="index.html">
+            <i class="fas fa-arrow-left"></i>
+          </a>
+          <h1 class="header_title">Teramoto Yukika</h1>
+        </div>
+        <!--헤더 우측 아이콘-->
+        <div class="header_header-column">
+          <span class="header_icon">
+            <i class="fas fa-search"></i>
+          </span>
+          <span class="header_icon">
+            <i class="fas fa-bars"></i>
+          </span>
+        </div>
+      </header>
     </div>
   </body>
-  <!--헤더(Chats) 바-->
-  <header class="header">
-    <!--헤더 좌측 아이콘 및 타이틀-->
-    <div class="header_header-column">
-      <!--백 버튼 누를 시, 이전(more) 페이지로 이동-->
-      <a class="header_back-btn" href="index.html">
-        <i class="fas fa-arrow-left"></i>
-      </a>
-      <h1 class="header_title">Teramoto Yukika</h1>
-    </div>
-    <!--헤더 우측 아이콘-->
-    <div class="header_header-column">
-      <span class="header_icon">
-        <i class="fas fa-search"></i>
-      </span>
-      <span class="header_icon">
-        <i class="fas fa-bars"></i>
-      </span>
-    </div>
-  </header>
   <main class="chat">
     <ul class="chat_messages">
       <span class="chat_timestamp">2020년 1월 8일 수요일</span>
@@ -148,30 +150,32 @@
       </li>
     </ul>
   </main>
-  <!--하단 목록(nevigation) 바-->
-  <nav class="nav">
-    <ul class="nav_list">
-      <li class="nav_list-item">
-        <i class="far fa-plus-square"></i>
-      </li>
-      <li class="chat_write">
-        <!--채팅 치는 영역-->
-        <div class="chat_write-column">
-          <input
-            type="text"
-            placeholder="내용을 입력하세요."
-            class="chat_write-input"
-          />
-        </div>
-      </li>
-      <li class="nav_list-item">
-        <i class="far fa-smile"></i>
-      </li>
-      <li class="nav_list-item">
-        <i class="fas fa-hashtag"></i>
-      </li>
-    </ul>
-  </nav>
+  <!--채팅 치는 영역-->
+  <div class="chat_write-container">
+    <!--input을 icon보다 먼저줘서 추후 채팅창 상호작용 시, 아이콘이 숨겨지도록-->
+    <input
+      type="text"
+      placeholder="내용을 입력하세요."
+      class="chat_write-input"
+    />
+    <!--좌우 아이콘을 한번에 제어하기 위해 chat_icon 클래스 추가-->
+    <div class="chat_icon-left chat_icon">
+      <i class="far fa-plus-square"></i>
+    </div>
+    <div class="chat_icon-right chat_icon">
+      <span class="chat_write-icon">
+        <i class="far fa-smile-wink"></i>
+      </span>
+      <span class="chat_write-icon">
+        <i class="fas fa-microphone"></i>
+      </span>
+    </div>
+  </div>
+  <div class="bigScreen">
+    <span class="bigScreen_text"
+      >호환되지 않는 화면 비율 입니다. 모바일 환경에서 실행해주세요.</span
+    >
+  </div>
 </html>
 
 <!--채팅 창-->
